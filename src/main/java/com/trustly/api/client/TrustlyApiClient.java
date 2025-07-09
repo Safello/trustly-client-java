@@ -39,6 +39,8 @@ import com.trustly.api.domain.methods.denywithdrawal.DenyWithdrawalRequestData;
 import com.trustly.api.domain.methods.denywithdrawal.DenyWithdrawalResponseData;
 import com.trustly.api.domain.methods.deposit.DepositRequestData;
 import com.trustly.api.domain.methods.deposit.DepositResponseData;
+import com.trustly.api.domain.methods.deposit.azura.AzuraDepositRequestData;
+import com.trustly.api.domain.methods.deposit.azura.AzuraDepositResponseData;
 import com.trustly.api.domain.methods.getwithdrawals.GetWithdrawalsRequestData;
 import com.trustly.api.domain.methods.getwithdrawals.GetWithdrawalsResponseData;
 import com.trustly.api.domain.methods.merchantsettlement.MerchantSettlementRequestData;
@@ -439,6 +441,13 @@ public class TrustlyApiClient implements Closeable {
    */
   public WithdrawResponseData withdraw(WithdrawRequestData request) throws TrustlyRequestException {
     return this.sendRequest(request, WithdrawResponseData.class, "Withdraw", null);
+  }
+
+  /**
+   * TODO insert javadoc
+   */
+  public AzuraDepositResponseData azuraDeposit(AzuraDepositRequestData request) throws TrustlyRequestException {
+    return this.sendRequest(request, AzuraDepositResponseData.class, "AzuraDeposit", null);
   }
 
   // Notifications
