@@ -1,5 +1,7 @@
 package com.trustly.api.domain.methods.deposit;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Builder;
@@ -11,6 +13,7 @@ import lombok.extern.jackson.Jacksonized;
 @Builder(toBuilder = true)
 @Jacksonized
 @RequiredArgsConstructor
+@JsonInclude(Include.NON_NULL)
 public class DepositRequestDataAzura {
 
   /**

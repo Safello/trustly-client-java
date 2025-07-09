@@ -41,6 +41,8 @@ import com.trustly.api.domain.methods.deposit.DepositRequestData;
 import com.trustly.api.domain.methods.deposit.DepositResponseData;
 import com.trustly.api.domain.methods.deposit.azura.AzuraDepositRequestData;
 import com.trustly.api.domain.methods.deposit.azura.AzuraDepositResponseData;
+import com.trustly.api.domain.methods.deposit.azura.AzuraRemoveAccountRequestData;
+import com.trustly.api.domain.methods.deposit.azura.AzuraRemoveAccountResponseData;
 import com.trustly.api.domain.methods.getwithdrawals.GetWithdrawalsRequestData;
 import com.trustly.api.domain.methods.getwithdrawals.GetWithdrawalsResponseData;
 import com.trustly.api.domain.methods.merchantsettlement.MerchantSettlementRequestData;
@@ -448,6 +450,13 @@ public class TrustlyApiClient implements Closeable {
    */
   public AzuraDepositResponseData azuraDeposit(AzuraDepositRequestData request) throws TrustlyRequestException {
     return this.sendRequest(request, AzuraDepositResponseData.class, "AzuraDeposit", null);
+  }
+
+  /**
+   * TODO insert javadoc
+   */
+  public AzuraRemoveAccountResponseData azuraRemoveAccount(AzuraRemoveAccountRequestData request) throws TrustlyRequestException {
+    return this.sendRequest(request, AzuraRemoveAccountResponseData.class, "RemoveAzuraAccount", null);
   }
 
   // Notifications
