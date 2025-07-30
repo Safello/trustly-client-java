@@ -28,6 +28,6 @@ public class AzuraRemoveAccountRequestDataAttributes extends AbstractRequestPara
   /**
    * ID of the account to be removed. This should be the same value as returned in the response to the initial AzuraDeposit call.
    */
-  @JsonProperty(value = "accountID")
+  @JsonProperty(value = "AccountID")
   String accountId;
 }
